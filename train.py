@@ -18,6 +18,7 @@ import cv2
 import math
 from filters import *
 
+#GPU settings
 if args.use_gpu == 0:
     gpu_id = '-1'
 else:

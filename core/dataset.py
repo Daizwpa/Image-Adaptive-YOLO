@@ -157,9 +157,9 @@ class Dataset(object):
         return image, bboxes
 
     def parse_annotation(self, annotation):
-
         line = annotation.split()
         image_path = line[0]
+        #print("iamge: "+image_path)
         if not os.path.exists(image_path):
             raise KeyError("%s does not exist ... " % image_path)
         image = cv2.imread(image_path)
@@ -180,13 +180,16 @@ class Dataset(object):
             beta = 0.01 * beta + 0.05
             # load voc_foggy_synthetic image offline (The synthesized code is ./core/data_make.py)
             if self.data_train_flag:
-                img_name = args.vocfog_traindata_dir + image_name \
+                img_name = "."+args.vocfog_traindata_dir + image_name \
                            + '_' + ("%.2f" % beta) + '.' + image_name_index
             else:
-                img_name = args.vocfog_valdata_dir + image_name \
+                img_name = "."+args.vocfog_valdata_dir + image_name \
                            + '_' + ("%.2f" % beta) + '.' + image_name_index
-
+            #print("The fog : " + img_name)
+            if not os.path.exists(img_name):
+                raise KeyError("%s does not exist ... " % img_name)
             foggy_image = cv2.imread(img_name)
+
             if self.data_aug:
                 if random.random() < 0.5:
                     _, w, _ = image.shape

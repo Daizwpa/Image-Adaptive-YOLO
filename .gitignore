@@ -1,0 +1,12 @@
+*.tar
+app.cu
+/data/VOC/
+/data/vdd/
+/experiments/exp_101/
+*.cpython-36.pyc
+/__pycache__/
+/core/__pycache__/
+__pycache__/
+*.py[cod]
+# C extensions
+*.so
