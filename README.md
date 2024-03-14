@@ -1,6 +1,6 @@
 # Image-Adaptive YOLO for Object Detection in Adverse Weather Conditions
 
-This code forks from this repository: https://github.com/wenyyu/Image-Adaptive-YOLO.
+This code forks in this repository: https://github.com/wenyyu/Image-Adaptive-YOLO.
 
 ####  Accepted by AAAI 2022 [[arxiv]](https://arxiv.org/abs/2112.08088) 
 Wenyu Liu, Gaofeng Ren, Runsheng Yu, Shi Guo, [Jianke Zhu](https://person.zju.edu.cn/jkzhu/645901.html), [Lei Zhang](https://web.comp.polyu.edu.hk/cslzhang/)
